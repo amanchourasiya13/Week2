@@ -1,13 +1,13 @@
  class BankAccount{
     
     // Static variable shared across all accounts
-    static String bankName = "SBI Bank";
+    private static String bankName = "SBI Bank";
     // Static counter for tracking total number of accounts
-    static int totalAccounts = 0;
+   private  static int totalAccounts = 0;
     
     // Final variable for account number to prevent reassignment
-    final int accountNumber;
-    String accountHolderName;
+  private  final int accountNumber;
+  private  String accountHolderName;
 
     // Constructor to initialize account details
     public BankAccount(String accountHolderName, int accountNumber) {
