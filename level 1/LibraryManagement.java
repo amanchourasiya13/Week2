@@ -15,23 +15,30 @@ static void displayLibraryName(){
 }
 // method display detail
   void displayDetail(){
-    if (this instanceof Book) {
-    System.out.println("Booke title: "+title);
+    System.out.println("\nBook title: "+title);
     System.out.println("Book author: "+author);
     System.out.println("isbn :"+isbn);
     }
-   else {
-    System.out.println("The object is not an instance of the Book class.");
-   }
+  }
+class Lib extends Book{
+  Lib(String title,String author,String isbn){
+    super(title,author,isbn);
   }
 }
   public class LibraryManagement{
     public static void main(String[] args) {
-      Book.displayLibraryName();
-    Book L1=new Book("constitution of india","Dr Bhim Rao Ambedkar", "#1234567");
-    L1.displayDetail();
-    System.out.println();
-    Book L2=new Book("Java Learning","kathy searra", "#1234567");
+      Book L1=new Lib("constitution of india","Dr Bhim Rao Ambedkar", "#1234567");
+      if(L1 instanceof Book){
+        Book.displayLibraryName();
+         L1.displayDetail();
+      }
+      Book L2=new Lib("Java Learning","kathy searra", "#1234567");
+   if(L2 instanceof Lib){
     L2.displayDetail();
+    }
+    Lib L3=new Lib("constitution of india","Dr Bhim Rao Ambedkar", "#1234567");
+    if(L3 instanceof Book){
+      L3.displayDetail();
+    }
     }
 }
