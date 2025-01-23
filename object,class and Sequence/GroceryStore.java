@@ -103,7 +103,7 @@ class BillGenerator {
     }
 }
 
-public class Main {
+public class GroceryStore{
     public static void main(String[] args) {
         // Creating products
         Product product1 = new Product("Laptop", 10, 5000);
